@@ -41,11 +41,12 @@ function App() {
             // Send request to backend for other data
             const requestBody = { data: dataToSend };
 
-            const res = await axios.post('http://localhost:5000/bfhl', requestBody, {
+            const res = await axios.post('/api/bfhl', requestBody, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
             });
+            
 
             setResponse(res.data);
             setErrorMessage('');
